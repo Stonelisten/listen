@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Image:
+  = @photo.image
+p
+  strong Created at:
+  = @photo.created_at
+p
+  strong Updated at:
+  = @photo.updated_at
+
+= link_to 'Edit', edit_photo_path(@photo)
+'|
+= link_to 'Back', photos_path
