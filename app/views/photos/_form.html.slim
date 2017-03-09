@@ -5,14 +5,19 @@
       ul
         - @photo.errors.full_messages.each do |message|
           li = message
+  .row
+    .col-xs-12
+      .panel.panel-default
+        .panel-body
+          .form-group.col-md-4.col-sm-6
+            = f.file_field :image
+            p class="help-block" 注意上传格式
 
-  .field
-    = f.file_field :image
-  .field
-    = f.label :created_at
-    = f.datetime_select :created_at
-  .field
-    = f.label :updated_at
-    = f.datetime_select :updated_at
+          .form-group.col-md-4.col-sm-6
+            = f.file_field :image
+            p class="help-block" 注意上传格式
 
-  .actions = f.submit
+          .form-group.col-md-4.col-sm-6
+            = f.file_field :image
+            p class="help-block" 注意上传格式
+          = f.submit('图片提交', class: 'btn btn-info')

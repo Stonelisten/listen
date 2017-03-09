@@ -1,9 +1,7 @@
-h1 Listing photos
-
-table
+table class = "table"
   thead
     tr
-      th Image
+      th Images
       th Created at
       th Updated at
       th
@@ -13,9 +11,10 @@ table
   tbody
     - @photos.each do |photo|
       tr
-        td = photo.image
-        td = photo.created_at
-        td = photo.updated_at
+        td
+          img src = photo.image class = "img-thumbnail"
+        td = format_timestamp(photo.created_at,'%Y-%m-%d %H:%M')
+        td = format_timestamp(photo.updated_at,'%Y-%m-%d %H:%M')
         td = link_to 'Show', photo
         td = link_to 'Edit', edit_photo_path(photo)
         td = link_to 'Destroy', photo, data: { confirm: 'Are you sure?' }, method: :delete

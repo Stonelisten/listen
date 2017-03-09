@@ -6,11 +6,11 @@ class PhotosController < ApplicationController
   def index
     @photos = Photo.all
   end
+
   # GET /photos/1
   # GET /photos/1.json
   def show
   end
-
 
   # GET /photos/new
   def new

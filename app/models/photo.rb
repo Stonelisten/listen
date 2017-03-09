@@ -1,6 +1,16 @@
 class Photo < ApplicationRecord
 	validates_presence_of :image
-	if condition
-		mount_uploader :image, PhotoUploader
+
+	mount_uploader :image, PhotoUploader
+	before_create :init_time
+	before_update :init_update_time
+
+	def init_time
+		self.created_at = Time.now
+		self.updated_at = Time.now
+	end
+
+	def init_update_time
+		self.updated_at = Time.now
 	end
 end

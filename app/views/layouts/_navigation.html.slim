@@ -2,7 +2,7 @@ ul class="nav navbar-nav"
   li= link_to('<span class="glyphicon glyphicon-home"></span> Home'.html_safe, root_path)
   - if current_user
     li= link_to('<span class="glyphicon glyphicon-lock"></span> Secret'.html_safe, secret_path)
-    li= link_to('<span class="glyphicon glyphicon-lock"></span> Photo'.html_safe, photos_path)
+    li= link_to('<span class="glyphicon glyphicon-picture"></span> Photo'.html_safe, photos_path)
   - else
     li= link_to('<span class="glyphicon glyphicon-phone-alt"></span> Contact'.html_safe, contact_path)
     li= link_to('<span class="glyphicon glyphicon-user"></span> About'.html_safe, about_path)
