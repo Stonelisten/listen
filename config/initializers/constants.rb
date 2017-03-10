@@ -1,1 +1,1 @@
-APPLICATION_NAME = 'LeeSoon'
+APPLICATION_NAME = 'sonko'

@@ -4,6 +4,7 @@ class Photo < ApplicationRecord
 	mount_uploader :image, PhotoUploader
 	before_create :init_time
 	before_update :init_update_time
+	Categories = [["轮播图",0],["小图",1]]
 
 	def init_time
 		self.created_at = Time.now
