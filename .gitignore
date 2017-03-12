@@ -23,3 +23,7 @@
 .idea/*
 .DS_Store
 config/database.yml
+config/secrets.yml
+config/puma.rb
+public/assets/
+shared/
