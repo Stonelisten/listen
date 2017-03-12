@@ -12,29 +12,20 @@
               = devise_error_messages!
 
           .form-group
-            = f.label(:first_name)
-            = f.text_field(:first_name, autofocus: true, placeholder: 'First name', class: 'form-control')
-
-          .form-group
-            = f.label(:last_name)
-            = f.text_field(:last_name, placeholder: 'Last name', class: 'form-control')
-
-          .form-group
-            = f.label(:email)
+            = f.label("邮箱")
             = f.email_field(:email, placeholder: 'Hello@youremail.com', class: 'form-control')
 
           .form-group
-            = f.label(:password)
+            = f.label("密码")
             - if @minimum_password_length
-              em= " (#{@minimum_password_length} characters minimum)"
+              em= " (不少于#{@minimum_password_length}个字符)"
             = f.password_field(:password, autocomplete: 'off', placeholder: 'Password', class: 'form-control')
 
           .form-group
-            = f.label(:password_confirmation)
+            = f.label("确认密码")
             = f.password_field(:password_confirmation, autocomplete: 'off', placeholder: 'Password confirmation', class: 'form-control')
-          = f.submit('Register', class: 'btn btn-primary btn-block')
+          = f.submit('注册', class: 'btn btn-primary btn-block')
 
       .panel-footer
         p
-          = 'Already Registered? Log In '
-          = link_to('here', new_user_session_path)
+          = link_to('登陆', new_user_session_path)
