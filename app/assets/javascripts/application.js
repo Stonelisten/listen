@@ -24,4 +24,6 @@ document.addEventListener("turbolinks:load", function() {
         $('li.active').removeClass('active');
     }
     $('a[href="' + location.pathname + '"]').parent('li').addClass('active');
+    $(".carousel-inner .item").first().addClass("active");
+    $(".carousel-indicators li").first().addClass("active");
 });

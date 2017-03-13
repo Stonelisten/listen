@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
 
   def home
     photos = Photo.all.limit(20)
+    @scrolls = photos.where(:img_type => 0)
     @thums = photos.where(:img_type => 1)
-    @scrolls = photos.where(:img_type => 2)
   end
 
   def about
