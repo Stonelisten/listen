@@ -27,3 +27,4 @@ config/secrets.yml
 config/puma.rb
 public/assets/
 shared/
+public/uploads/

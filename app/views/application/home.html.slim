@@ -1,31 +1,32 @@
-//.text-center
-  h1 Home
-  p.text-success this is a landing page
-  p.text-success bootstrap, devise(login, register, settings, sign out), lato-font and slim is configured!
-
-
+.home
+  .carousel.slide id="carousel-generic" data-ride="carousel"
+    ol class="carousel-indicators"
+      li class="active" data-target="#carousel-generic" data-slide-to="0"
+      li data-target="#carousel-generic" data-slide-to="1"
+      li data-target="#carousel-generic" data-slide-to="2"
+    .carousel-inner role="listbox"
+      .item.active
+        img src="http://img.zcool.cn/community/0160a556cb299932f875520fab7a99.jpg"
+        .carousel-caption
+      .item
+        img src="http://img.zcool.cn/community/01374956cb29996ac7252ce6f376f6.jpg"
+          .carousel-caption
+      .item
+        img src="http://img.zcool.cn/community/012cf556cb299a6ac7252ce606e8e1.jpg"
+          .carousel-caption
+    a href="#carousel-generic" class="left carousel-control" role="button" data-slide="prev"
+      span class="glyphicon glyphicon-chevron-left" aria-hidden="true"
+    a href="#carousel-generic" class="right carousel-control" role="button" data-slide="next"
+      span class="glyphicon glyphicon-chevron-right" aria-hidden="true"
 hr
 .row
-  .col-sm-6.col-md-3
-    .thumbnail
-      img src="images/image01.png"
-        .caption
-          h4 Fallout
-  .col-sm-6.col-md-3
-    .thumbnail
-      img src="images/image01.png"
-        .caption
-          h4 Devil May Cry
-  .col-sm-6.col-md-3
-    .thumbnail
-      img src="images/image01.png"
-        .caption
-          h4 Resident Evil
-  .col-sm-6.col-md-3
-    .thumbnail
-      img src="images/image01.png"
-        .caption
-          h4 Resident Evil
+  - for item in @thums
+    .col-xs-6.col-md-4
+      .thumbnail
+        img src= item.image
+
+
+
 
 
 

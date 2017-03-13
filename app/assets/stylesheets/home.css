@@ -1,3 +1,9 @@
 .home{
   margin: 0 auto;width: 78%;
 }
+.table > tbody > tr > td{
+    vertical-align: middle;
+}
+.table > tbody > tr > td img{
+    width:220px;
+}

@@ -4,15 +4,17 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, except: [:home, :about, :contact]
 
   def home
+    photos = Photo.all.limit(20)
+    @thums = photos.where(:img_type => 1)
+    @scrolls = photos.where(:img_type => 2)
   end
 
   def about
-  end
 
-  def contact
   end
 
   def secret
+
   end
 
   protected

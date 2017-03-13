@@ -1,11 +1,10 @@
 ul class="nav navbar-nav"
   li= link_to('<span class="glyphicon glyphicon-home"></span> 首页'.html_safe, root_path)
+  li= link_to('<span class="glyphicon glyphicon-comment"></span> 设计说明'.html_safe, about_path)
   - if current_user
-    li= link_to('<span class="glyphicon glyphicon-lock"></span> Secret'.html_safe, secret_path)
-    li= link_to('<span class="glyphicon glyphicon-picture"></span> 图片'.html_safe, photos_path)
-  - else
-    li= link_to('<span class="glyphicon glyphicon-phone-alt"></span> Contact'.html_safe, contact_path)
-    li= link_to('<span class="glyphicon glyphicon-user"></span> About'.html_safe, about_path)
+    li= link_to('<span class="glyphicon glyphicon-picture"></span> 图片管理'.html_safe, photos_path)
+
+
 
 ul class="nav navbar-nav navbar-right"
   - if current_user
