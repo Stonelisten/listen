@@ -15,10 +15,10 @@ table class = "table table-condensed"
           img src = photo.image class = "img-rounded"
         td = format_timestamp(photo.created_at,'%Y-%m-%d %H:%M')
         td = photo.img_type
-        td = link_to 'Show', photo
-        td = link_to 'Edit', edit_photo_path(photo)
-        td = link_to 'Destroy', photo, data: { confirm: 'Are you sure?' }, method: :delete
+        - if can?(:manager,photo)
+          td = link_to 'Show', photo
+          td = link_to 'Edit', edit_photo_path(photo)
+          td = link_to 'Destroy', photo, data: { confirm: 'Are you sure?' }, method: :delete
+= link_to 'New Photo', new_photo_path, :class => "btn btn-default" if can?(:manager,@user)
 
-br
 
-= link_to 'New Photo', new_photo_path

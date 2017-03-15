@@ -1,8 +1,11 @@
 .home
   .carousel.slide id="carousel-generic" data-ride="carousel"
     ol class="carousel-indicators"
-      - @scrolls.length().times do |i|
+      //- @scrolls.length().times do |i|
         li data-target="#carousel-generic" data-slide-to="#{i}"
+      li data-target="#carousel-generic" data-slide-to="0"
+      li data-target="#carousel-generic" data-slide-to="1"
+      li data-target="#carousel-generic" data-slide-to="2"
     .carousel-inner role="listbox"
       - for item in @scrolls
         .item

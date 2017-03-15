@@ -1,8 +1,9 @@
 ul class="nav navbar-nav"
   li= link_to('<span class="glyphicon glyphicon-home"></span> 首页'.html_safe, root_path)
   li= link_to('<span class="glyphicon glyphicon-comment"></span> 设计说明'.html_safe, about_path)
-  - if current_user
+  - if can?(:manager,current_user)
     li= link_to('<span class="glyphicon glyphicon-picture"></span> 图片管理'.html_safe, photos_path)
+    li= link_to('<span class="glyphicon glyphicon-user"></span> 用户管理'.html_safe, users_path)
 
 
 
