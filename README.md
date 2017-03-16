@@ -1,6 +1,6 @@
-# Rails5搭建的一个图片展示网站
+# Rails5搭建的一个设计blog
 #### [https://leesoon.net](https://www.leesoon.net)
-**前端框架用的是bootstrap3后端数据库用的mysql 体验了rails5 的 turbolinks 和bootstrap3的 mobilefirst**
+**前端框架用的是bootstrap3 结合Rails5 turbolinks 做的一个content-base网站 **
 ---- 
 + rails5
 + carrierwave
